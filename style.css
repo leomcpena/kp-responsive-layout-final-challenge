@@ -21,6 +21,7 @@
   --fs-700: 2.25rem;
   --fs-900: 5.625rem;
   --accent-color: #a59678;
+  --accent-color--light: hsla(40deg 20% 56% / 0.3);
   --primary-color--dark: #2e323f;
   --primary-color--medium: #3b4050;
   --primary-color--light: #6f737f;
@@ -37,6 +38,17 @@
   padding: 0;
 }
 
+body {
+  font-family: var(--ff-text);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-title);
+}
+
 img {
   max-width: 100%;
 }
@@ -44,6 +56,71 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.bg--dark {
+  background-color: var(--primary-color--dark);
+}
+
+.bg--medium {
+  background-color: var(--primary-color--medium);
+}
+
+.bg--light {
+  background-color: var(--accent-color--light);
+}
+
+.flex {
+  display: flex;
+}
+
+.header {
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.nav__list,
+.footer-nav__list {
+  list-style: none;
+}
+
+.nav__link,
+.footer-nav__link {
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: color 200ms ease;
+}
+
+.nav__link:hover,
+.footer-nav__link:hover {
+  color: var(--accent-color);
+}
+
+.nav__list {
+  gap: 2em;
+  align-items: center;
+}
+
+.nav__list + .nav__list {
+  margin-left: 5em;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  font-family: var(--ff-title);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-300);
+}
+
+.btn {
+  background-color: var(--accent-color);
+  padding: 0.25em 1em;
+  border-radius: 100vw;
+  transition: background 200ms ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
 }
 
 @media (min-width: var(--screen-medium)) {

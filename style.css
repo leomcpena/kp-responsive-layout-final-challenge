@@ -19,15 +19,14 @@
   --fs-500: 1.5rem;
   --fs-600: 1.875rem;
   --fs-700: 2.25rem;
-  --fs-900: 5.625rem;
+  --fs-800: 3rem;
+  --fs-900: 4.5rem;
   --accent-color: #a59678;
   --accent-color--light: hsla(40deg 20% 56% / 0.3);
   --primary-color--dark: #2e323f;
   --primary-color--medium: #3b4050;
   --primary-color--light: #6f737f;
   --secondary-color: #ffffff;
-  --screen-large: 1000px;
-  --screen-medium: 700px;
 }
 
 *,
@@ -47,6 +46,7 @@ h2,
 h3,
 h4 {
   font-family: var(--ff-title);
+  line-height: 1;
 }
 
 img {
@@ -57,6 +57,13 @@ img {
   width: calc(100% - 3rem);
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.primary-content,
+.secondary-content,
+.sidebar,
+.footer {
+  padding: 4rem 0;
 }
 
 .bg--dark {
@@ -73,6 +80,23 @@ img {
 
 .flex {
   display: flex;
+}
+
+.btn {
+  background-color: var(--accent-color);
+  padding: 0.25em 1em;
+  border-radius: 100vw;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--ff-title);
+  color: var(--secondary-color);
+  transition: all 200ms ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 .header {
@@ -93,7 +117,9 @@ img {
 }
 
 .nav__link:hover,
-.footer-nav__link:hover {
+.nav__link:focus,
+.footer-nav__link:hover,
+.footer-nav__link:focus {
   color: var(--accent-color);
 }
 
@@ -113,19 +139,64 @@ img {
   font-size: var(--fs-300);
 }
 
-.btn {
-  background-color: var(--accent-color);
-  padding: 0.25em 1em;
-  border-radius: 100vw;
-  transition: background 200ms ease;
+.hero {
+  padding: 6rem 0;
+  color: var(--secondary-color);
+  text-align: center;
 }
 
-.btn:hover {
-  background-color: var(--secondary-color);
+.hero__title {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+  text-wrap: balance;
 }
 
-@media (min-width: var(--screen-medium)) {
+.hero__title--accent {
+  color: var(--accent-color);
 }
 
-@media (min-width: var(--screen-large)) {
+.hero__subtitle {
+  font-size: var(--fs-500);
+  margin-top: 1.8em;
+}
+
+.hero__button {
+  display: inline-block;
+  padding: 0.5em 2em;
+}
+
+.hero__text {
+  line-height: 1.6;
+}
+.hero__button {
+  margin-top: 1em;
+}
+
+@media (min-width: 700px) {
+  .hero__title,
+  .hero__subtitle {
+    width: 75%;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    padding: 6rem 0 10rem;
+    display: flex;
+    gap: 3rem;
+    text-align: left;
+  }
+  .hero__title {
+    font-size: var(--fs-900);
+    width: 100%;
+  }
+  .hero__subtitle {
+    align-self: flex-end;
+    width: 100%;
+    margin-top: 0;
+  }
+  .hero__button {
+    margin-top: 2em;
+  }
 }

@@ -115,6 +115,15 @@ img {
   padding: 1rem 0;
 }
 
+.nav {
+  position: fixed;
+  inset: 0 0 0 30%;
+  background: var(--primary-color--light);
+  flex-direction: column;
+  padding: min(30vh, 10rem) 4rem 0 0;
+  text-align: right;
+}
+
 .nav__list,
 .footer-nav__list {
   list-style: none;
@@ -135,12 +144,13 @@ img {
 }
 
 .nav__list {
+  display: flex;
   gap: 2em;
-  align-items: center;
+  flex-direction: column;
 }
 
 .nav__list + .nav__list {
-  margin-left: 5em;
+  margin-top: 4em;
 }
 
 .nav__link {
@@ -269,6 +279,24 @@ img {
 }
 
 @media (min-width: 700px) {
+  .nav {
+    position: relative;
+    inset: 0;
+    flex-direction: row;
+    background: none;
+    padding: 0;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav__list + .nav__list {
+    margin-top: 0;
+    margin-left: 5em;
+  }
+
   .hero__title,
   .hero__subtitle {
     width: 75%;

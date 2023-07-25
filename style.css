@@ -249,6 +249,8 @@ img {
   flex-direction: column;
   gap: 2.5em;
   text-align: center;
+  max-width: 500px;
+  margin-inline: auto;
 }
 
 .footer__about--title,
@@ -280,11 +282,6 @@ img {
 
   .sidebar {
     flex-direction: row;
-  }
-
-  .footer__info {
-    max-width: 500px;
-    margin-inline: auto;
   }
 }
 

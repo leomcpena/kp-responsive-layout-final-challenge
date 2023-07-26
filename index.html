@@ -14,7 +14,7 @@
     <script src="nav.js" defer></script>
   </head>
   <body>
-    <header class="bg--dark">
+    <header class="sticky bg--dark">
       <div class="header container flex">
         <a href="#" class="logo">
           <img src="/img/logo.svg" alt="Logo" />
@@ -26,7 +26,7 @@
         >
           <span class="sr-only">Menu</span>
         </button>
-        <nav id="navigation" class="nav flex">
+        <nav id="navigation" data-visible="false" class="nav flex">
           <ul class="nav__list nav__list--primary flex">
             <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
             <li class="nav__item"><a href="#" class="nav__link">About</a></li>
@@ -42,7 +42,7 @@
       </div>
     </header>
 
-    <section class="bg--medium">
+    <section class="content bg--medium">
       <div class="container hero">
         <div class="hero__title">
           <h1>

@@ -18,11 +18,9 @@ This is a solution to the final challenge on [Kevin Powell - Conquering Responsi
 
 ### Screenshot
 
-<!-- ![Design preview for the QR code component coding challenge](./design/challenge-submission.jpg) -->
+![Design preview for the Conquering Responsive Layouts final challenge](./design/submission.jpg)
 
 ### Links
-
-<!-- ! change solution url -->
 
 - Solution URL: [GitHub Pages](https://leomcpena.github.io/kp-responsive-layout-final-challenge/)
 
@@ -57,5 +55,5 @@ This is a solution to the final challenge on [Kevin Powell - Conquering Responsi
 
 ## Author
 
-- Website - [Leonardo Pena](https://www.leopena.com/)
-<!--! - LinkedIn -  -->
+- Website - [Hashnode blog](https://www.leopena.com/)
+- LinkedIn - [Profile](https://www.linkedin.com/in/leomcpena/)
